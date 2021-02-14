@@ -27,6 +27,9 @@ $impsrc = str_replace( array( '$html .=' ), array( 'echo' ), $impsrc);
 $impsrc = highlight_string( $impsrc, true );
 
 switch ($id) {
+	case "javascript" :
+		$vuln = 'JavaScript';
+		break;
 	case "fi" :
 		$vuln = 'File Inclusion';
 		break;
@@ -99,7 +102,7 @@ $page[ 'body' ] .= "
 	<br /> <br />
 
 	<form>
-		<input type=\"button\" value=\"<-- Back\" onClick=\"history.go(-1);return true;\">
+		<input type=\"button\" value=\"<-- Back\" onclick=\"history.go(-1);return true;\">
 	</form>
 
 </div>\n";
